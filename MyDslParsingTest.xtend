@@ -97,6 +97,17 @@ class SchemeParsingTest {
 		val errors = result.eResource.errors
 		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
 	}
+	
+	@Test
+	def void listTest) {
+		val result = parseHelper.parse('''
+			(list 1 2 3)
+		''')
+		Assertions.assertNotNull(result)
+		//source https://repl.it/@bburnham/Hour-of-Code-Scheme
+		val errors = result.eResource.errors
+		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+}
 
 
 
